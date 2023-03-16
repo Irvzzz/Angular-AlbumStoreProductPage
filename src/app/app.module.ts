@@ -6,6 +6,14 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { ProductPageComponent } from './product-page/product-page.component';
 import { ProductService } from './product.service';
+
+import { RouterModule, Routes } from '@angular/router';
+import { ProductListComponent } from './product-list/product-list.component';
+
+const appRoutes: Routes = [
+  {path: 'products', component: ProductListComponent},
+  {path: 'product/:id', component: ProductPageComponent}
+];
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,7 +22,8 @@ import { ProductService } from './product.service';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [ProductService],
   bootstrap: [AppComponent]
