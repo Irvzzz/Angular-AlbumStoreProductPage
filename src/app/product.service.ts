@@ -2,7 +2,7 @@
 import { Http, Response } from "@angular/http";
 import { Injectable } from '@angular/core/src/di';
 
-import 'rxjs/ass/operator/map';
+import 'rxjs/add/operator/map';
 
 @Injectable ()
 export class ProductService {
