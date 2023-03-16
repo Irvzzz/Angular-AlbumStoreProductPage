@@ -9,14 +9,12 @@ import { ProductService } from './product.service';
 @NgModule({
   declarations: [
     AppComponent,
-    ProductPageComponent,
-    ProductService
+    ProductPageComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule,
-    ProductService
+    HttpModule
   ],
   providers: [ProductService],
   bootstrap: [AppComponent]
